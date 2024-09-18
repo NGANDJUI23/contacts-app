@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
-import { NavbarComponent } from '../composants/navbar/navbar.component';
-import { FooterComponent } from '../composants/footer/footer.component';
-import { ContactComponent } from '../composants/contact/contact.component';
-
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { ContactComponent } from './components/contact/contact.component';
 @Component({
   selector: 'app-root',
   standalone: true,
