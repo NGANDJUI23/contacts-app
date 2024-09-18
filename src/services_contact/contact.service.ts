@@ -15,6 +15,10 @@ export class ContactService {
   }
 
   contact_salaire_superieur_2000$() {
-    return this.list_contact.filter(contact => parseFloat(contact.balance.replace(',', '.')) > 2000);
+    return this.list_contact.filter(contact => this.parseBalance(contact.balance) > 2000);
+  }
+
+  parseBalance(balance: string): number {
+    return parseFloat(balance.replace(/[$,]/g, ''));
   }
 }

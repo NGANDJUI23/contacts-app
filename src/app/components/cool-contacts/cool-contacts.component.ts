@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class CoolContactsComponent {
   service_contact = inject(ContactService);
-  list = this.service_contact.contact_pomme_fruit_favoris();
+  list = this.service_contact.contact_salaire_superieur_2000$();
   constructor() { }
   filteredContact = [...this.list];
   filterText: string = '';

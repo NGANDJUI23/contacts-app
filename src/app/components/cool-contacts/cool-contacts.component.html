@@ -9,6 +9,7 @@
     <div class="d-flex flex-row flex-wrap gap-4 justify-content-center ">
       @for (contact of filteredContact; track $index) {
       <app-contact nom = "{{contact.name}}" numero="{{contact.phone}}" adresse="{{contact.address}}" etat="{{contact.isActive}}"></app-contact>
+      <p>{{contact.balance}}</p>
       }
     </div>
   </div>
