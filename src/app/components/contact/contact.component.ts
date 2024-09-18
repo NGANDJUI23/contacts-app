@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
-  nom!: string;
-  numero!: string;
-  adresse!: string;
-  etat: boolean = true;
+  @Input() nom!: string;
+  @Input() numero!: string;
+  @Input() adresse!: string;
+  @Input() etat: string = "true";
 }

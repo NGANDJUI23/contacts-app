@@ -1,8 +1,8 @@
-<div class="container">
+<div class="container" style="margin-top: 7rem;">
   <div class="row">
     <div class="col d-flex flex-row flex-wrap gap-4 ">
       @for (contact of service_contact.contact_pomme_fruit_favoris(); track $index) {
-      <app-contact></app-contact>
+      <app-contact nom = "{{contact.name}}" numero="{{contact.phone}}" adresse="{{contact.address}}" etat="{{contact.isActive}}"></app-contact>
       }
     </div>
   </div>
