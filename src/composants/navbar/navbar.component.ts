@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-
+  @Input() color!: string;
 }
