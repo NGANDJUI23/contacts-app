@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+
 @Component({
   selector: 'app-navbar',
   standalone: true,
@@ -8,4 +9,8 @@ import { Component, Input } from '@angular/core';
 })
 export class NavbarComponent {
   @Input() color!: string;
+  async presentAlert() {
+    await alert("bonjpour");
+
+  }
 }

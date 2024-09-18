@@ -1,7 +1,13 @@
+
 <div class="container" style="margin-top: 6.5rem; margin-bottom: 3rem">
-  <div class="row">
-    <div class="col d-flex flex-row flex-wrap gap-4 ">
-      @for (contact of service_contact.contact_pomme_fruit_favoris(); track $index) {
+  <div class="row justify-content-center gap-5">
+      <input type="text" [(ngModel)]="filterText" placeholder="Filtrer par couleur des yeux" class=" col-3 border-0 border-bottom" />
+      <button type="button" class="btn btn-primary col-3" (click)="filter_1()">Filtrer par Couleur des yeux</button>
+      <button type="button" class="btn btn-primary col-3" (click)="filter_2()">Filtrer par fruit favori</button>
+  </div>
+  <div class="row mt-1">
+    <div class="d-flex flex-row flex-wrap gap-4 justify-content-center ">
+      @for (contact of filteredContact; track $index) {
       <app-contact nom = "{{contact.name}}" numero="{{contact.phone}}" adresse="{{contact.address}}" etat="{{contact.isActive}}"></app-contact>
       }
     </div>
