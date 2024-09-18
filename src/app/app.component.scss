@@ -1,0 +1,25 @@
+header{
+    background-color: #3a86ff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    a{
+        color: #ffffff;
+        font-weight: 700;
+        text-decoration: none;
+        &:hover{
+            color: #f3ef0d;
+        }
+    }
+}
+
+footer{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    background-color: #cccfcc;
+    width: 90%;
+    padding-left: 2em;
+    
+}
