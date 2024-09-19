@@ -1,22 +1,43 @@
-<header class="d-flex align-items-center logo justify-content-between header fixed-top z-3 navbar navbar-expand-lg bg-body-tertiary">
+<header class="d-flex align-items-center logo justify-content-between header fixed-top z-3 navbar navbar-expand-lg bg-body-tertiary overflow-hidden pe-4 ps-4">
   <div style="width: 5rem; height: 5rem;">
     <img src="assets/contact.jpeg" alt="logo_img" width="100%" height="100%">
   </div>
   <nav>
     <ol class="d-flex gap-5 list-unstyled">
-      <li>
-        <a href="" class="text-decoration-none text-{{color}}" >Accueil</a>
+      @if (page == "home") {
+        <li>
+        <a [routerLink]="['/home']" routerLinkActive="router-link-active"  class="text-decoration-none text-primary" >Accueil</a>
       </li>
+      }@else {
+        <li>
+          <a [routerLink]="['/home']" routerLinkActive="router-link-active"
+            class="text-decoration-none text-dark">Accueil</a>
+        </li>
+      }
+      @if (page == "contact") {
       <li>
-        <a href="" class="text-decoration-none text-dark">Contacts</a>
+        <a [routerLink]="['/contact']" routerLinkActive="router-link-active"
+          class="text-decoration-none text-primary">Contact</a>
       </li>
+      }@else {
       <li>
-        <a href="" class="text-decoration-none text-dark">A Propos</a>
+        <a [routerLink]="['/contact']" routerLinkActive="router-link-active" class="text-decoration-none text-dark">Contact</a>
       </li>
+      }
+      @if (page == "a propos") {
+      <li>
+        <a [routerLink]="['/propos']" routerLinkActive="router-link-active"
+          class="text-decoration-none text-primary">A propos</a>
+      </li>
+      }@else {
+      <li>
+        <a [routerLink]="['/propos']" routerLinkActive="router-link-active" class="text-decoration-none text-dark">A propos</a>
+      </li>
+      }
     </ol>
   </nav>
   <form class="d-flex" role="search">
     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-    <button class="btn btn-outline-success" type="submit" (click)="presentAlert()">Search</button>
+    <button class="btn btn-outline-success" type="submit">Search</button>
   </form>
 </header>

@@ -1,16 +1,13 @@
 import { Component, Input } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
-  @Input() color!: string;
-  async presentAlert() {
-    await alert("bonjpour");
-
-  }
+  @Input() page!: string;
 }
