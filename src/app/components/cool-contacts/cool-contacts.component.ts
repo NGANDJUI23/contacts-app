@@ -16,12 +16,12 @@ export class CoolContactsComponent {
   filteredContact = [...this.list];
   filterText: string = '';
 
-  async filter_1() {
+  filter_1() {
     this.filteredContact = this.list.filter(contact =>
       contact["eyeColor"].toLowerCase().includes(this.filterText.toLowerCase())
     );
   }
-  async filter_2() {
+  filter_2() {
     this.filteredContact = this.list.filter(contact =>
       contact["favoriteFruit"].toLowerCase().includes(this.filterText.toLowerCase())
     );
