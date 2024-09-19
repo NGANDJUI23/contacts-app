@@ -2,6 +2,7 @@ import { provideRouter, Routes, withComponentInputBinding } from '@angular/route
 import { HomeComponent } from '../home/home.component';
 import { ContactviewComponent } from './contactview/contactview.component';
 import { DetailsContactComponent } from './components/details-contact/details-contact.component';
+import { ProposComponent } from './components/propos/propos.component';
 
 
 export const routes: Routes = [
@@ -20,6 +21,10 @@ export const routes: Routes = [
   {
     path: 'contact/detail-contact/:id',
     component: DetailsContactComponent
+  },
+  {
+    path: 'propos',
+    component: ProposComponent
   }
 ];
 
