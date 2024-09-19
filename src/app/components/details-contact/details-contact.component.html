@@ -1,1 +1,19 @@
-ID: {{contact!._id}}
+<ul class="list-group">
+  <li class="list-group-item active" aria-current="true">Detail du contact</li>
+  @for (item of function_return_tableau_key_valeur_contact(); track $index) {
+    @if (item) {
+      @if ($index!=19) {
+        <li class="list-group-item">{{item.key}}: {{item.value}}</li>
+      }@else {
+        @for (items of function_return_tableau_key_valeur_contact_friend(); track $index) {
+          @if (items) {
+            <li class="list-group-item">Id: {{items.value.id}} Name: {{items.value.name}}</li>
+          }
+        }
+      }
+
+    }
+
+  }
+
+</ul>
