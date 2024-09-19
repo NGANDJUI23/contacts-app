@@ -1,6 +1,8 @@
-import { Routes } from '@angular/router';
+import { provideRouter, Routes, withComponentInputBinding } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
-import { ContactviewComponent } from '../contactview/contactview.component';
+import { ContactviewComponent } from './contactview/contactview.component';
+import { DetailsContactComponent } from './components/details-contact/details-contact.component';
+
 
 export const routes: Routes = [
   {
@@ -14,5 +16,11 @@ export const routes: Routes = [
   {
     path: 'contact',
     component: ContactviewComponent
+  },
+  {
+    path: 'contact/detail-contact/:id',
+    component: DetailsContactComponent
   }
 ];
+
+

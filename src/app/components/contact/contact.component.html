@@ -8,12 +8,17 @@
       <li class="list-group-item">{{adresse}}</li>
     </ul>
   </div>
-  @if (etat == "true") {
+  <div class="d-flex justify-content-between">
+    @if (etat == "true") {
     <button class="col-3 btn btn-primary mb-2 mt-2 m-auto" type="button">Actif</button>
-  }
-  @else {
+    }
+    @else {
     <button class="col-3 btn btn-danger mb-2 mt-2 m-auto" type="button">Inactif</button>
-  }
+    }
+    @if (page == "contact") {
+    <a class="col-3 btn btn-info mb-2 mt-2 m-auto" type="button" (click)="onDetails()" [routerLink]="['/contact/detail-contact', id]">Detail</a>
+    }
+  </div>
 
 </div>
 

@@ -21,4 +21,5 @@ export class ContactService {
   parseBalance(balance: string): number {
     return parseFloat(balance.replace(/[$,]/g, ''));
   }
+
 }

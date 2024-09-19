@@ -1,4 +1,5 @@
-export const contact_list = [
+export const contact_list =
+  [
 	{
 	  "_id": "66ea4efc3a76e870c58fe5cf",
 	  "index": 0,
